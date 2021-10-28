@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="page4.css">
+    <script src='https://kit.fontawesome.com/134357056c.js'></script>
+    <script src='https://www.youtube.com/player_api'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script>
+    <script src="jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css'>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Review film around the world</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="navbar">
+  <div class="navbar-container">
+    <div class="logo-container">
+      <h1 class="logo">Reviewfilm</h1>
+    </div>
+    <div class="menu-container">
+      <nav>
+        <ul>
+          <li><a href="page2.html">Trang chủ</a></li>
+          <li class="sub-nav">
+            <a href="#">Quốc gia</a>
+            <ul class="sub">
+              <li><a href="#">Hàn Quốc</a></li>
+              <li><a href="#">Nhật Bản</a></li>
+              <li><a href="#">Việt Nam</a></li>
+            </ul>
+          </li>
+          <li class="sub-nav">
+            <a href="#">Top IMDb</a>
+            <ul class="sub">
+              <li><a href="https://www.imdb.com/chart/top/?ref_=nv_mv_250">Phim lẻ</a></li>
+              <li><a href="https://www.imdb.com/chart/toptv/?ref_=nv_tvv_250">Tv Series</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Tin tức</a></li>
+          <li><a href="#" id="info">Liên hệ</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div style="margin-left: 90px;">
+      <input type="text" name="keyword" placeholder="Tìm: tên phim, đạo diễn, diễn viên" value="" onkeyup="onSearch(this.value)" id="searchkeyword">
+      <i class="fas fa-search"></i>
+    </div>
+    <div class="sign">
+      <button class="login" id="js-login">Đăng nhập</button>
+    </div>    
+  </div>
+</div>
+<section class="op">
+<div class="new1">
+    <div class="tag">
+      <p>Tin tuc</p>
+    </div>
+    <div class="new">
+      <div class="info">
+          <h1 class="underlines"><a href="https://tuoitre.vn/alec-baldwin-no-sung-dao-cu-vo-tinh-ban-chet-nguoi-tren-phim-truong-rust-20211022105122953.htm">Alec Baldwin nổ súng đạo cụ vô tình bắn chết người <br> trên phim trường Rustr</a></h1>
+          <p>Theo Văn phòng cảnh sát trưởng hạt Santa Fe, nạn nhân nữ được xác định là đạo diễn hình ảnh <br> Halyna Hutchins, 42 tuổi.</p>
+      </div>
+      <div class="lines"><hr></div>
+      <div class="direct">
+        <p>2 tiếng trước &nbsp;<i class="far fa-comment-dots"></i> 0 comment</p>
+      </div>
+    </div>
+</div>
+<div class="new2">
+    <div class="tag">
+        <p>Tin tuc</p>
+    </div>
+    <div class="new">
+      <div class="info">
+        <h1 class="underlines"><a href="https://thanhnien.vn/chua-co-lenh-mo-cua-rap-phim-van-ruc-rich-len-lich-chieu-tu-29-10-post1393920.html">Rạp chiếu phim có thể hoạt động 100% công suất ở địa bàn dịch cấp độ 1</a></h1>
+        <p>Những bom tấn lớn như Black Widow và Shang-Chi, Eternals, Venom 2 <br>của Marvel cũng có lịch chiếu luân phiên ...</p>
+      </div>
+      <div class="lines"><hr></div>
+      <div class="direct">
+        <p>2 tiếng trước &nbsp;<i class="far fa-comment-dots"></i> 2 comment</p>
+      </div>
+    </div>
+</div>
+</section>
+<section class="slide">
+    <div id="demo" class="carousel slide" data-ride="carousel">
+      <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1"></li>
+      <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/Banner.png" alt="Los Angeles">
+        </div>
+        <div class="carousel-item">
+          <img src="images/poster1.jpg" alt="Chicago">
+        </div>
+        <div class="carousel-item">
+          <img src="images/0.jpeg" alt="New York">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+      </div>
+</section>
+<section class="part1">
+    <div class="fast-new1">
+      <div class="banner">
+        <p>Tin Thế Giới</p>
+        <div class="lines1"><hr></div>
+      </div>
+      <div class="new-type">
+        <div class="new-type-pic">
+          <img src="images/News/GettyImages-1211236243-H-2021.jpg">
+          <h3 class="underlines"><a href="https://thegioidienanh.vn/cillian-murphy-che-tao-bom-nguyen-tu-cho-christopher-nolan-trong-oppenheimer-55957.html">Cillian Murphy chế tạo bom nguyên tử cho Christopher Nolan trong ‘Oppenheimer’</a></h3>
+          <p> Cillian Murphy đảm nhận vai chính, nhà khoa học J. Robert Oppenheimer, người được coi là “cha đẻ” của bom nguyên tử trong bộ phim mới của đạo diễn Christopher Nolan Oppenheimer....</p>
+          <p class="byth"><i class="fas fa-clock"></i> 2 tiếng trước &nbsp; <i class="fas fa-comment-dots"></i>10 comments</p>
+        </div>
+        <div class="new-type-pic">
+          <img src="images/News/will-poulter.jpg">
+          <h3 class="underlines"><a href="https://marvelphim.com/dao-dien-james-gunn-xac-nhan-will-poulter-tro-thanh-adam-warlock-cua-mcu/">Diễn viên Will Poulter sẽ đảm nhiệm vai Adam Warlock trong Vệ Binh Dải Ngân Hà 3</a></h3>
+          <p> Sau khi đã “nhá hàng” về sự xuất hiện của Adam Warlock ở cuối Guardians of the Galaxy Vol. 2, cuối cùng nhân vậy này ....</p>
+          <p class="byth"><i class="fas fa-clock"></i> 2 tiếng trước &nbsp; <i class="fas fa-comment-dots"></i>10 comments</p>
+        </div>
+        <div class="new-type-pic">
+          <img src="images/News/54798334017680839-aknvFyJUQQoZFtmFnYzKi4vGv4J.jpg">
+          <h3 class="underlines"><a href="https://thanhnien.vn/bom-tan-xu-cat-nhan-mua-loi-khen-tu-gioi-phe-binh-phim-post1108606.html">Bom tấn "Dune" nhận loạt đánh giá tích cực từ LHP Venice</a></h3>
+          <p> Bom tấn khoa học viễn tưởng Dune được chuyển thể từ cuốn tiểu thuyết cùng tên của tác giả Frank Herbert - một trong những kiệt tác văn học .......</p>
+          <p class="byth"><i class="fas fa-clock"></i> 2 tiếng trước &nbsp; <i class="fas fa-comment-dots"></i>10 comments</p>
+        </div>
+        <div class="new-type-pic">
+          <img src="images/News/squid-game-main-promo-1634741485134331726689.jpg">
+          <h3 class="underlines"><a href="https://laodong.vn/the-gioi/choang-voi-doanh-thu-hieu-ung-kinh-te-cua-bom-tan-squid-game-964900.ldo">Lợi nhuận của Squid Game có thể khủng tới mức nào?</a></h3>
+          <p> Nếu Squid Game thực sự đã mang lại cho Netflix 891 triệu USD, thì series này còn lời lãi hơn hàng loạt bom tấn khủng của thế giới, điển hình như....</p>
+          <p class="byth"><i class="fas fa-clock"></i> 2 tiếng trước &nbsp; <i class="fas fa-comment-dots"></i>10 comments</p>
+        </div>
+      </div>
+    </div>
+    <div class="fast-new2">
+      <div class="more-type1">
+        <div class="center">
+          <div class="card md-elevation-z2">
+            <img class="image-big" src="images/News/quang-cao-tai-rap-chieu-phim-5.jpg"/>
+            <div class="content clearfix">
+               <div class="avatar"></div>
+                <div class="meta">
+                  <div class="title">Top Doanh thu phòng vé</div>
+                  <div class="subtitle">2021</div>
+               </div>
+               <a class="down-icon material-icons toggle">keyboard_arrow_down</a>
+            </div>
+            <div class="expandable_content">
+              <div class="item">
+                <div class="meta">
+                  <div class="title">Bắc Mĩ</div>
+                  <div class="subtitle">Top 1: HALLOWEEN KILLS: 49,4$</div>
+               </div>
+            </div>
+              <div class="item">
+                <div class="meta">
+                  <div class="title">Việt Nam</div>
+                  <div class="subtitle">Đang cập nhật..</div>
+               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="more-type2">
+        <div class="movie">
+          <div class="prime"></div>
+          <div class="front">
+            <img src="images/News/photo-1-16347044697781170171591.jpg" alt="film" class="cover">
+          </div>
+        <div class="back">
+          <div class="trailer" id="player">
+          </div>
+        <div class="title">
+          <h3>Eternals</h3>
+          <span></span>
+            <i class="fas fa-play ic-play"></i>
+            <i class="fas fa-plus ic-plus"></i>
+        </div>
+        <div class="description">
+          <p>Eternals, một chủng tộc bất tử hùng mạnh do các Celestials tạo ra, được gửi xuống Trái Đất để dẫn dắt và bảo vệ loài người khỏi các Deviants - một chủng loài xấu xa, hiếu chiến và tham vọng, kẻ thù số một của các Eternals (nhưng chúng cùng loài người cũng được tạo ra bởi chính các Celestials). Từ hàng nghìn năm về trước, chủng loài Deviants đã luôn nung nấu dã tâm muốn xâm chiếm Trái Đất nhưng đều bị các Eternals quyền năng ngăn chặn. Và lần này, các Eternals sẽ phải tập hợp lại để một lần nữa cứu Trái Đất thoát khỏi sự diệt vong. </p>
+        </div>
+        <div class="time">
+          <p>2h 3min <span>2021</span></p>
+          <i class="far fa-comment-alt"></i>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="footer-item">
+    <div class="extend">
+      <div class="letter">
+        <p>Review film</p>
+        <a href="">Movies</a>
+        <a href="">TV series</a>
+      </div>
+      <div class="letter">
+        <p>Thể loại</p>
+        <a href="">Kinh Dị</a>
+        <a href="">Hành Động</a>
+        <a href="">Khoa học - Viễn Tưởng</a>
+        <a href="">Chính Kịch</a>
+        <a href="">Tâm Lí - Giật Gân</a>
+      </div>
+    <div class="letter">
+      <p>Quốc Gia</p>
+      <a href="">Mĩ</a>
+      <a href="">India</a>
+      <a href="">China</a>
+      <a href="">Korea</a>
+      <a href="">nepal</a>
+      <a href="">spain</a>
+    </div>
+  </div>
+  <div class="subscribe">
+    <h5>Subscribe</h5>
+    <p class="sub-input">Nhập vào gmail của bạn để chúng tôi có thể thông báo về những bộ phim hoặc hoạt động mới</p>
+    <input class="email" type="text" placeholder="Enter your Email">
+    <button class="sub-but">Subscribe</button>
+  </div>
+  <div class="copyright">
+    <h2>Review film</h2>
+    <p>Copyright © Review film. All Rights Reserved</p>
+    <p class="direct">Designer by Cong Duy and Khanh Huy </p>
+  
+      <div class="wrapper">
+        <div class="icon facebook">
+          <div class="tooltip">Facebook</div>
+          <span><i class="fab fa-facebook-f"></i></span>
+        </div>
+        <div class="icon twitter">
+          <div class="tooltip">Twitter</div>
+          <span><i class="fab fa-twitter"></i></span>
+        </div>
+        <div class="icon instagram">
+          <div class="tooltip">Instagram</div>
+          <span><i class="fab fa-instagram"></i></span>
+        </div>
+        <div class="icon github">
+          <div class="tooltip">Github</div>
+          <span><i class="fab fa-github"></i></span>
+        </div>
+        <div class="icon youtube">
+          <div class="tooltip">Youtube</div>
+          <span><i class="fab fa-youtube"></i></span>
+        </div>
+      </div>
+    
+  </div>
+</div>
+</footer>
+<div class="modal js-modal">
+  <div class="formbg">
+    <div class="formbg-inner padding-horizontal-48">
+        <div class="modal-close js-close">
+            <i class="fas fa-times-circle"></i>
+          </div>
+        <span class="padding-bottom-15">Đăng nhập vào tài khoản</span>
+        <form id="stripe-login">
+          <div class="field padding-bottom-24">
+            <label for="email">Email</label>
+            <input type="email" name="email">
+          </div>
+          <div class="field padding-bottom-24">
+            <div class="grid--50-50">
+              <label for="password">Password</label>
+              <div class="reset-pass">
+                <a href="#">Forgot your password?</a>
+              </div>
+            </div>
+            <input type="password" name="password">
+          </div>
+          <div class="field field-checkbox padding-bottom-24 flex-flex align-center">
+            <label for="checkbox">
+              <input type="checkbox" name="checkbox"> Stay signed in for a week
+            </label>
+          </div>
+          <div class="field padding-bottom-24">
+            <input type="submit" name="submit" value="Continue">
+          </div>
+          <div class="field">
+            <a class="ssolink" href="#">Use single sign-on (Google) instead</a>
+          </div>
+        </form>
+      </div>
+    </div>
+</div>
+<script src="page.js">
+  
+</script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: black;
+    margin-top: 10px;
+}
+/*Css nav*/
+header{
+    display:flex;
+}
+nav{
+    margin-left: auto;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+nav ul{
+    list-style-type: none;
+    padding:0px;
+    margin:10px;
+    display: flex;
+    margin: 12px;
+}
+nav ul > li > a{
+    text-decoration: none;
+    display: block;
+    padding:15px 10px;
+}
+div > img{
+    height: 60px;
+}
+nav ul {
+    
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+nav ul > li{
+    min-width: 120px;
+    text-align: center;
+
+    border-right: 1px solid black;
+}
+nav ul > li > a{
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    color: white;
+    
+}
+nav ul > li > a:last-child{
+    border-right: none;
+}
+nav ul > li > a:hover{
+    background-color:cyan;
+    color:white;
+}
+/*Tạo submenu */
+.sub{
+    display: none;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+}
+.sub-nav:hover .sub{
+    display: block;
+}
+/*Thiết lập logo ảnh kèm thanh tìm kiếm*/
+.sub2 > img{
+    border-radius: 30%;
+    position: fixed;
+    height: 50px;
+    margin: 21px 10px 50px 70px;
+    float: left;
+}
+input[type=text] {
+    width: 325px;
+    outline: none;
+    border: 1px;
+    background-color: #303137;
+    border-radius: 100px;
+    color: #9f9f9f;
+    display: inline-block;
+    padding: 8px 40px 8px 15px;
+    text-decoration: none;
+    position: absolute;
+    margin: 30px 20px;
+}
+/**/
+section.banner{
+    animation: doinen ease-in-out 3s infinite ;
+   
+    background-image: 100%;
+    background-repeat: none;
+
+}
+section.banner img{
+    visibility: hidden;
+    width: 100%;
+}
+@keyframes doinen {
+    0%{
+        background-image: url('images/1.jpg');
+    }
+    30%{
+        background-image: url('images/2.jpg')
+    }
+    70%{
+        background-image: url('images/3.jpg')
+    }
+    
+}
+section.subject{
+    background-color: cyan;
+    
+    padding:20px;
+}
+section.subject h1{
+    font-size : 3vw;
+    text-align: center;
+    color:red;
+
+}
+section.introduction{
+    background-color: violet;
+    color: white;
+    padding: 15px 10%;
+    text-align: center;
+}
+section.introduction2{
+    background-color: lightcyan;
+}
+h1{
+    font-size: 3vw;
+}
+section.introduction p{
+    margin-top: 50px;
+}
+h1.underline:after{
+    content:" ";
+    height: 10px;
+    width: 5%;
+    background-color:gray;
+    display: block;
+    margin: 10px auto;
+}
+div.items{
+    display: flex;
+
+}
+div.item{
+    width: 25%;
+    padding: 2% ;
+}
+div.item img{
+    height: 100%;
+    width: 100%;
+}
+div item > div{
+    background-color: lightblue;
+    padding: 20px;
+}
+/*CSS product*/
+section.product{
+    background-color: lightgray;
+    color: gray;
+    text-align: center;
+}
+div.prods{
+    display: flex;
+    flex-wrap: wrap;
+}
+div.prod{
+    width: 33.33%;
+}
+div.prod img{
+    max-width: 100%;
+}
+section.stats{
+    background-color: gold ;
+    color: white;
+    display: flex;
+    text-align: center;
+}
+section.stats h1 {
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+div.stat{
+    width: 25%;
+}
+
+

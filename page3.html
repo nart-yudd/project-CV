@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="page3.css">
+    <script src="jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Review film around the world</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="navbar">
+    <div class="navbar-container">
+      <div class="logo-container">
+        <h1 class="logo">Reviewfilm</h1>
+      </div>
+      <div class="menu-container">
+        <nav>
+          <ul>
+            <li><a href="page2.html">Trang chủ</a></li>
+            <li class="sub-nav">
+              <a href="#">Quốc gia</a>
+                <ul class="sub">
+                  <li><a href="#">Hàn Quốc</a></li>
+                  <li><a href="#">Nhật Bản</a></li>
+                  <li><a href="#">Việt Nam</a></li>
+                </ul>
+            </li>
+            <li class="sub-nav">
+              <a href="#">Top IMDb</a>
+                <ul class="sub">
+                  <li><a href="https://www.imdb.com/chart/top/?ref_=nv_mv_250">Phim lẻ</a></li>
+                  <li><a href="https://www.imdb.com/chart/toptv/?ref_=nv_tvv_250">Tv Series</a></li>
+                </ul>
+            </li>
+            <li><a href="page4.html">Tin tức</a></li>
+            <li><a href="#" id="info">Liên hệ</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div style="margin-left: 90px;">
+        <input type="text" name="keyword" placeholder="Tìm: tên phim, đạo diễn, diễn viên" value="" onkeyup="onSearch(this.value)" id="searchkeyword">
+        <i class="fas fa-search"></i>
+      </div>
+      <div class="sign">
+        <button class="login" id="js-login">Đăng nhập</button>
+     </div>    
+    </div>
+  </div>
+  <section class="slide">
+    <div id="demo" class="carousel slide" data-ride="carousel">
+      <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1"></li>
+      <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/poster1.jpg" alt="Los Angeles">
+        </div>
+        <div class="carousel-item">
+          <img src="images/poster2.jpg" alt="Chicago">
+        </div>
+        <div class="carousel-item">
+          <img src="images/poster3.jpg" alt="New York">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+      </div>
+  </section>
+
+  <div class="type">
+    <h1>Thông tin chi tiết</h1>
+    <div class="line"></div>
+  </div>
+
+  <section class="content">
+    <div class="left">
+      <img src="images/kinh dị/a.jpg">
+      <div class="type-film">
+        <div class="type-film-block">
+          <p>Kinh dị</p>
+        </div>
+        <div class="type-film-block">
+          <p>Hành động</p>
+        </div>
+        <div class="type-film-block">
+          <p>Viễn tưởng</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="name-film">
+        <p>Alien</p>
+      </div>
+      <div class="details">
+        <p>Tựa việt: Quái Vật Không Gian<br></p>
+        <div class="lines"><hr></div>
+        <p>Quốc gia: Mĩ</p>  
+        <div class="lines"><hr></div>
+        <p>Năm phát hành: 1979</p>
+        <div class="lines"><hr></div>  
+        <p>
+          Diễn viên: Sigourney Weaver, Tom Skerritt, John Hurt, 
+          Veronica Cartwright,...<br>
+          Đạo diễn: Ridley Scott <br>
+        </p>
+        <div class="lines"><hr></div>  
+        <p>Phim lẻ (gồm 3 phần và 2 phần tiền truyện)</p>
+      </div>
+      <div class="score">
+        <div class="rate">
+          <img src="images/logoIDMB.PNG" alt="IDMB">
+          <p> &ensp; 8.4</p>
+        </div>
+        <div class="rate">
+          <img src="images/logott.PNG" alt="Rotten Tomato">
+          <p> &ensp; 98%</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="type">
+    <h1>Bàn luận</h1>
+    <div class="line"></div>
+  </div>
+  
+  <section class="comment">
+    <ul class="tab">
+      <li><a href="#tab1" class="active">Bình luận</a></li>
+      <li><a href="#tab2">Đánh giá</a></li>
+    </ul>
+    <div class="tab-content active">
+      <div class="comment-base" id="tab1">
+        <p>Chưa có bình luận mới</p>
+        <div class="line2"><hr></div> 
+        <div class="box"><textarea cols="180" rows="5" placeholder="Bình luận tại đây"></textarea></div>
+        <div><button class="post" value="Đăng">Đăng</button></div>
+      </div>
+      <div class="comment-base"  id="tab2" >
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="more">
+    <div class="type">
+      <h1>Đề xuất</h1>
+      <div class="line"></div>
+      <div class="form">
+        <div class="film">
+          <figure>
+            <a href="page3.html"><img src="images/kinh dị/1a.jpg" alt="photo"></a> 
+              <div class="caption">
+                <figcaption><h1 class="cap">The Nun</h1></figcaption>
+              </div>
+          </figure>
+          <div class="detail">
+            <ul>
+              <li>Quốc gia: Mỹ</li>
+              <li>Năm phát hành: 2018 </li>
+              <li>IDMB: 5.3</li>
+              <li>Phim lẻ</li>
+              <li>Tựa việt: Ác quỷ ma sơ</li>
+            </ul>
+            <br>
+            <a href="page3.html"><input type="button" value="Đánh giá" href="page3.html"></a>
+          </div>
+        </div>
+        <div class="film">
+          <figure>
+             <img src="images/kinh di/b.jpg" alt="photo">
+             <div class="caption">
+              <figcaption><h1 class="cap">The Wailing</h1></figcaption>
+             </div>
+          
+          </figure>
+          <div class="detail">
+            <ul>
+              <li>Quốc gia: Hàn Quốc</li>
+              <li>Năm phát hành: 2016</li>
+              <li>IDMB: 7.5</li>
+              <li>Phim lẻ</li>
+              <li>Tựa việt: Tiếng than</li>
+            </ul>
+            <br>
+            <input type="button" value="Đánh giá">
+          </div>
+        </div>
+        <div class="film">
+          <figure>
+             <img src="images/kinh di/2c.jpg" alt="photo">
+             <div class="caption">
+              <figcaption><h1 class="cap">Midsomar</h1></figcaption>
+             </div>
+          </figure>
+          <div class="detail">
+            <ul>
+              <li>Quốc gia: Mỹ</li>
+              <li>Năm phát hành: 2019</li>
+              <li>IDMB: 7.1</li>
+              <li>Phim lẻ</li>
+              <li>Tựa việt: Lễ hội đẫm máu</li>
+            </ul>
+            <br>
+            <input type="button" value="Đánh giá">
+          </div>
+        </div>
+        <div class="film">
+          <figure>
+             <img src="images/kinh di/d.png" alt="photo">
+             <div class="caption">
+              <figcaption><h1 class="cap">Midsomar</h1></figcaption>
+             </div>
+          </figure>
+          <div class="detail">
+            <ul>
+              <li>Quốc gia: Mỹ</li>
+              <li>Năm phát hành: 2019</li>
+              <li>IDMB: 7.1</li>
+              <li>Phim lẻ</li>
+              <li>Tựa việt: Lễ hội đẫm máu</li>
+            </ul>
+            <br>
+            <input type="button" value="Đánh giá">
+          </div>
+        </div>
+      </div>
+      </div>
+  </section>
+  <script src="page3.js"></script>
+<footer>
+    <div class="footer-item">
+      <div class="extend">
+        <div class="letter">
+          <p>Review film</p>
+          <a href="">Movies</a>
+          <a href="">TV series</a>
+        </div>
+        <div class="letter">
+          <p>Thể loại</p>
+          <a href="">Kinh Dị</a>
+          <a href="">Hành Động</a>
+          <a href="">Khoa học - Viễn Tưởng</a>
+          <a href="">Chính Kịch</a>
+          <a href="">Tâm Lí - Giật Gân</a>
+        </div>
+      <div class="letter">
+        <p>Quốc Gia</p>
+        <a href="">Mĩ</a>
+        <a href="">India</a>
+        <a href="">China</a>
+        <a href="">Korea</a>
+        <a href="">nepal</a>
+        <a href="">spain</a>
+      </div>
+    </div>
+    <div class="subscribe">
+      <h5>Subscribe</h5>
+      <p class="sub-input">Nhập vào gmail của bạn để chúng tôi có thể thông báo về những bộ phim hoặc hoạt động mới</p>
+      <input class="email" type="text" placeholder="Enter your Email">
+      <button class="sub-but">Subscribe</button>
+    </div>
+    <div class="copyright">
+      <h2>Review film</h2>
+      <p>Copyright © Review film. All Rights Reserved</p>
+      <p class="direct">Designer by Cong Duy and Khanh Huy</p>
+    
+        <div class="wrapper">
+          <div class="icon facebook">
+            <div class="tooltip">Facebook</div>
+            <span><i class="fab fa-facebook-f"></i></span>
+          </div>
+          <div class="icon twitter">
+            <div class="tooltip">Twitter</div>
+            <span><i class="fab fa-twitter"></i></span>
+          </div>
+          <div class="icon instagram">
+            <div class="tooltip">Instagram</div>
+            <span><i class="fab fa-instagram"></i></span>
+          </div>
+          <div class="icon github">
+            <div class="tooltip">Github</div>
+            <span><i class="fab fa-github"></i></span>
+          </div>
+          <div class="icon youtube">
+            <div class="tooltip">Youtube</div>
+            <span><i class="fab fa-youtube"></i></span>
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</footer>
+<div class="modal js-modal">
+  <div class="formbg">
+    <div class="formbg-inner padding-horizontal-48">
+        <div class="modal-close js-close">
+            <i class="fas fa-times-circle"></i>
+          </div>
+        <span class="padding-bottom-15">Đăng nhập vào tài khoản</span>
+        <form id="stripe-login">
+          <div class="field padding-bottom-24">
+            <label for="email">Email</label>
+            <input type="email" name="email">
+          </div>
+          <div class="field padding-bottom-24">
+            <div class="grid--50-50">
+              <label for="password">Password</label>
+              <div class="reset-pass">
+                <a href="#">Forgot your password?</a>
+              </div>
+            </div>
+            <input type="password" name="password">
+          </div>
+          <div class="field field-checkbox padding-bottom-24 flex-flex align-center">
+            <label for="checkbox">
+              <input type="checkbox" name="checkbox"> Stay signed in for a week
+            </label>
+          </div>
+          <div class="field padding-bottom-24">
+            <input type="submit" name="submit" value="Continue">
+          </div>
+          <div class="field">
+            <a class="ssolink" href="#">Use single sign-on (Google) instead</a>
+          </div>
+        </form>
+      </div>
+    </div>
+</div>
+<script src="page.js">
+
+</script>
+</body>
+</html>
+
+      
+      

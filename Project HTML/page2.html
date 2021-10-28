@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="page2.css">
+    <script src="jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="responsive.css">
+    <title>Review film around the world</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+</head>
+<body>
+<div class="navbar">
+  <div class="navbar-container">
+    <div class="logo-container">
+      <h1 class="logo">Reviewfilm</h1>
+    </div>
+    <nav class="menu-container">
+      <ul>
+        <li class="hide-on-mobile-tablet"><a href="page2.html">Trang chủ </a></li>
+        <li class="sub-nav hide-on-mobile-tablet">
+          <a href="#">Quốc gia</a>
+          <ul class="sub">
+            <li><a href="#">Hàn Quốc</a></li>
+            <li><a href="#">Nhật Bản</a></li>
+            <li><a href="#">Việt Nam</a></li>
+          </ul>
+        </li>
+        <li class="sub-nav hide-on-mobile-tablet">
+          <a href="#">Top IMDb</a>
+            <ul class="sub">
+              <li><a href="https://www.imdb.com/chart/top/?ref_=nv_mv_250">Phim lẻ</a></li>
+              <li><a href="https://www.imdb.com/chart/toptv/?ref_=nv_tvv_250">Tv Series</a></li>
+            </ul>
+        </li>
+        <li class="hide-on-mobile-tablet"><a href="page4.html">Tin tức</a></li>
+        <li class="hide-on-mobile-tablet" id="info"><a href="">Liên hệ</a></li>
+      </ul>
+    </nav>
+    <div class="box-search" style="margin-left: 4px;">
+      <input type="text" id="keyword" placeholder="Tìm kiếm" value="" onkeyup="onSearch(this.value)">
+      <i class="fas fa-search icon-search"></i>
+    </div>
+    <div class="sign hide-on-mobile hide-on-tablet ">
+      <button class="login" id="js-login">Đăng nhập</button>
+    </div>
+  </div>
+</div>
+
+
+<div class="menu-icon">
+  <i class="fas fa-bars" id="bar-icon"></i>
+  <div>
+    <ul class="board-menu-container" >
+      <li class="board-menu">Trang chủ
+      </li>
+      <li class="board-menu">Quốc gia</li>
+      <li class="board-menu board-menu-box"><a>Thể loại
+        <i class="fas fa-sort-down"></i>
+      </a>
+        <ul class="board-menu-category-cha">
+          <li class="board-menu-category">Kinh dị</li>
+          <li class="board-menu-category">Hành động</li>
+          <li class="board-menu-category">Huyền bí</li>
+          <li class="board-menu-category">Hoạt hình</li>
+          <li class="board-menu-category">Trinh thám</li>
+          <li class="board-menu-category">Tình cảm</li>
+        </ul>
+      </li>
+      <li class="board-menu">Top IMDb</li>
+      <li class="board-menu">Tin tức</li>
+      <li class="board-menu">Liên hệ</li>
+      <li class="board-menu">Đăng nhập</li>
+  
+    </ul>
+  </div>
+
+</div>
+
+<script>
+  $(document).ready(function(){
+   $('#bar-icon').click(function(){
+    $('.board-menu-container').slideToggle();
+   });
+   $('.board-menu-box').click(function(){
+    $('.board-menu-category-cha').slideToggle();
+   });
+
+  })
+</script>
+<section class="slide">
+  <div id="demo" class="carousel slide hide-on-mobile-tablet" data-ride="carousel">
+    <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1"></li>
+      <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/poster1.jpg" alt="Los Angeles">
+      </div>
+      <div class="carousel-item">
+        <img src="images/poster2.jpg" alt="Chicago">
+      </div>
+      <div class="carousel-item">
+        <img src="images/poster3.jpg" alt="New York">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+  </div>
+</section>
+<div class="type hide-on-mobile-tablet">
+    <h1>Kinh dị</h1>
+  <div class="line"></div>
+</div>
+<section class="content">
+  <div class="left hide-on-mobile-tablet">
+    <h2>Thể loại</h2>
+      <ul class="list">
+        <li><a href="page2.html">Kinh dị &nbsp;<i class="fas fa-arrow-circle-right"></i></a></li>
+        <li><a href="#">Giật gân, tâm lí &nbsp;<i class="fas fa-arrow-circle-right"></i></a></li>
+        <li><a href="#">Khoa học - viễn tưởng &nbsp;<i class="fas fa-arrow-circle-right"></i></a></li>
+        <li><a href="#">Hành động &nbsp;<i class="fas fa-arrow-circle-right"></i></a> </li>
+        <li><a href="#">Huyền bí &nbsp;<i class="fas fa-arrow-circle-right"></i></a></li>
+        <li><a href="#">Hoạt hình &nbsp;<i class="fas fa-arrow-circle-right"></i></a></li>
+        <li><a href="#">Tình cảm &nbsp;<i class="fas fa-arrow-circle-right"></i></a></li>
+        <li><a href="#">Tiểu sử &nbsp;<i class="fas fa-arrow-circle-right"></i></a></li>
+        <li><a href="#">Trinh thám, tội  &nbsp;<i class="fas fa-arrow-circle-right"></i></a></li>
+        <li><a href="#">Tuyển tập series &nbsp;<i class="fas fa-arrow-circle-right"></i></a></li>
+      </ul>
+  </div>
+  <div class="right">
+    <div class="comment">
+      <ul class="tab">
+        <li><a href="#tab1" class="active">Mới ra mắt</a></li>
+        <li><a href="#tab2">Phổ biến</a></li>
+        <li><a href="#tab3">Cũ</a></li>
+      </ul>
+    </div>
+    <div class="tab-content active">
+      <div id="tab1" class="film-box">
+        <div class="film">
+          <figure>
+            <a href="page3.html"><img src="images/kinh di/a.jpg" alt="photo"></a> 
+              <div class="caption">
+                <figcaption><h1 class="cap">Alien</h1></figcaption>
+              </div>
+            </figure>
+            <div class="detail">
+              <ul>
+                <li>Quốc gia: Mỹ</li>
+                <li>Năm phát hành: 1979 </li>
+                <li>IDMB: 8.4</li>
+                <li>Phim lẻ</li>
+                <li>Tựa việt: Quái vật vũ trụ</li>
+              </ul>
+              <br>
+              <a href="page3.html"><input type="button" value="Đánh giá" href="page3.html"></a>
+            </div>
+          </div>
+          <div class="film">
+            <figure>
+               <img src="images/kinh di/b.jpg" alt="photo">
+               <div class="caption">
+                <figcaption><h1 class="cap">The Wailing</h1></figcaption>
+               </div>
+            
+            </figure>
+            <div class="detail">
+              <ul>
+                <li>Quốc gia: Hàn Quốc</li>
+                <li>Năm phát hành: 2016</li>
+                <li>IDMB: 7.5</li>
+                <li>Phim lẻ</li>
+                <li>Tựa việt: Tiếng than</li>
+              </ul>
+              <br>
+              <input type="button" value="Đánh giá">
+            </div>
+          </div>
+          <div class="film">
+            <figure>
+               <img src="images/kinh di/c.jpeg" alt="photo">
+               <div class="caption">
+                <figcaption><h1 class="cap">Midsomar</h1></figcaption>
+               </div>
+            
+            </figure>
+            <div class="detail">
+              <ul>
+                <li>Quốc gia: Mỹ</li>
+                <li>Năm phát hành: 2019</li>
+                <li>IDMB: 7.1</li>
+                <li>Phim lẻ</li>
+                <li>Tựa việt: Lễ hội đẫm máu</li>
+              </ul>
+              <br>
+              <input type="button" value="Đánh giá">
+            </div>
+          </div>
+          <div class="film">
+            <figure>
+               <img src="images/kinh di/d.png" alt="photo">
+               <div class="caption">
+                <figcaption><h1 class="cap">A Tale Of Two Sister</h1></figcaption>
+               </div>
+            
+            </figure>
+            <div class="detail">
+              <ul>
+                <li>Quốc gia: Hàn Quốc</li>
+                <li>Năm phát hành: 2003</li>
+                <li>IDMB: 7.2</li>
+                <li>Phim lẻ</li>
+                <li>Tựa việt: Chị em song sinh</li>
+              </ul>
+              <br>
+              <input type="button" value="Đánh giá">
+            </div>
+          </div>
+          <div class="film">
+            <figure>
+               <img src="images/kinh di/e.jpg" alt="photo">
+               <div class="caption">
+                <figcaption><h1 class="cap">Fear Street I</h1></figcaption>
+               </div>
+            
+            </figure>
+            <div class="detail">
+              <ul>
+                <li>Quốc gia: Mỹ</li>
+                <li>Năm phát hành: 2021</li>
+                <li>IDMB: 6.2</li>
+                <li>Phim lẻ (3 phần )</li>
+                <li>Tựa việt: Truyền thuyết đô thị</li>
+              </ul>
+              <br>
+              <input type="button" value="Đánh giá">
+            </div>
+          </div>
+    
+          <div class="film">
+            <figure>
+               <img src="images/kinh di/f.jpg" alt="photo">
+               <div class="caption">
+                <figcaption><h1 class="cap">The Conjuring:<br>The Devil M.Me Do It</h1></figcaption>
+               </div>
+            
+            </figure>
+            <div class="detail">
+              <ul>
+                <li>Quốc gia: Mỹ</li>
+                <li>Năm phát hành: 2021</li>
+                <li>IDMB: 6.3</li>
+                <li>Phim lẻ</li>
+                <li>Tựa việt: Ám ảnh kinh hoàng<br>Ma xui quỷ khiến</li>
+              </ul>
+              <br>
+              <input type="button" value="Đánh giá">
+            </div>
+          </div>
+          <div class="film">
+            <figure>
+               <img src="images/kinh di/g.jpg" alt="photo">
+               <div class="caption">
+                <figcaption><h1 class="cap">Army Of The Dead</h1></figcaption>
+               </div>
+    
+            </figure>
+            <div class="detail">
+              <ul>
+                <li>Quốc gia: Mỹ</li>
+                <li>Năm phát hành: 2021</li>
+                <li>IDMB: 5.8</li>
+                <li>Phim lẻ</li>
+                <li>Tựa việt: Đội quân xác sống</li>
+              </ul>
+              <br>
+              <input type="button" value="Đánh giá">
+            </div>
+          </div>
+          <div class="film">
+            <figure>
+               <img src="images/kinh di/h.jpg" alt="photo">
+               <div class="caption">
+                <figcaption><h1 class="cap">Wrong Turn</h1></figcaption>
+               </div>
+            
+            </figure>
+            <div class="detail">
+              <ul>
+                <li>Quốc gia: Mỹ</li>
+                <li>Năm phát hành: 2021</li>
+                <li>IDMB: 5.5</li>
+                <li>Phim lẻ</li>
+                <li>Tựa việt: Ngã rẻ tử thần</li>
+              </ul>
+              <br>
+              <input type="button" value="Đánh giá">
+            </div>
+          </div>
+          <div class="film">
+            <figure>
+               <img src="images/kinh di/i.png" alt="photo">
+               <div class="caption">
+                <figcaption><h1 class="cap">Malignant</h1></figcaption>
+               </div>
+            
+            </figure>
+            <div class="detail">
+              <ul>
+                <li>Quốc gia: Mỹ</li>
+                <li>Năm phát hành: 2021</li>
+                <li>IDMB: 5.5</li>
+                <li>Phim lẻ</li>
+                <li>Tựa việt: Hiện thân tà ác</li>
+              </ul>
+              <br>
+              <input type="button" value="Đánh giá">
+            </div>
+          </div>
+          
+          <div class="film">
+            <figure>
+               <img src="images/kinh di/l.jpg" alt="photo">
+               <div class="caption">
+                <figcaption><h1 class="cap">The Green Knight</h1></figcaption>
+               </div>
+            
+            </figure>
+            <div class="detail">
+              <ul>
+                <li>Quốc gia: Mỹ</li>
+                <li>Năm phát hành: 2021</li>
+                <li>IDMB: 6.6</li>
+                <li>Phim lẻ</li>
+                <li>Tựa việt: Hiệp sĩ Rừng xanh</li>
+              </ul>
+              <br>
+              <input type="button" value="Đánh giá">
+            </div>
+          </div>
+        </div>
+        <div id="tab2" class="film-box">
+          
+          <div class="film">
+            <figure>
+               <img src="images/kinh di/1b.jpg" alt="photo">
+               <div class="caption">
+                <figcaption><h1 class="cap">IT 2</h1></figcaption>
+               </div>
+            
+            </figure>
+            <div class="detail">
+              <ul>
+                <li>Quốc gia: Mĩ</li>
+                <li>Năm phát hành: 2019</li>
+                <li>IDMB: 6.5</li>
+                <li>Phim lẻ</li>
+                <li>Tựa việt: Gã hề ma quái</li>
+              </ul>
+              <br>
+              <input type="button" value="Đánh giá">
+            </div>
+          </div>
+          
+          <div class="film">
+            <figure>
+               <img src="images/kinh di/1d.png" alt="photo">
+               <div class="caption">
+                <figcaption><h1 class="cap">Blood Red Sky</h1></figcaption>
+               </div>
+            
+            </figure>
+            <div class="detail">
+              <ul>
+                <li>Quốc gia: Đức</li>
+                <li>Năm phát hành: 2021</li>
+                <li>IDMB: 6.1</li>
+                <li>TV series: 1 phần</li>
+                <li>Tựa việt: Bầu trời nhuốm máu </li>
+              </ul>
+              <br>
+              <input type="button" value="Đánh giá">
+            </div>
+          </div>
+          <div class="film">
+            <figure>
+               <img src="images/kinh di/1e.jpg" alt="photo">
+               <div class="caption">
+                <figcaption><h1 class="cap">Hereditary</h1></figcaption>
+               </div>
+            
+            </figure>
+            <div class="detail">
+              <ul>
+                <li>Quốc gia: Mỹ</li>
+                <li>Năm phát hành: 2018</li>
+                <li>IDMB: 7.3</li>
+                <li>Phim lẻ R</li>
+                <li>Tựa việt: Di truyền</li>
+              </ul>
+              <br>
+              <input type="button" value="Đánh giá">
+            </div>
+          </div>
+    
+          <div class="film">
+            <figure>
+               <img src="images/kinh di/1f.jpg" alt="photo">
+               <div class="caption">
+                <figcaption><h1 class="cap">The Platform</h1></figcaption>
+               </div>
+            
+            </figure>
+            <div class="detail">
+              <ul>
+                <li>Quốc gia: Tây Ban Nha</li>
+                <li>Năm phát hành: 2019</li>
+                <li>IDMB: 7.0</li>
+                <li>Phim lẻ</li>
+                <li>Tựa việt: Hố sau đói khát</li>
+              </ul>
+              <br>
+              <input type="button" value="Đánh giá">
+            </div>
+          </div>
+          <div class="film">
+            <figure>
+               <img src="images/kinh di/1g.jpg" alt="photo">
+               <div class="caption">
+                <figcaption><h1 class="cap">World War Z</h1></figcaption>
+               </div>
+    
+            </figure>
+            <div class="detail">
+              <ul>
+                <li>Quốc gia: Mỹ</li>
+                <li>Năm phát hành: 2013</li>
+                <li>IDMB: 7.0</li>
+                <li>Phim lẻ</li>
+                <li>Tựa việt: Thế chiến Z</li>
+              </ul>
+              <br>
+              <input type="button" value="Đánh giá">
+            </div>
+          </div>
+          <div class="film">
+            <figure>
+               <img src="images/kinh di/1h.jpg" alt="photo">
+               <div class="caption">
+                <figcaption><h1 class="cap">The Ritual</h1></figcaption>
+               </div>
+            
+            </figure>
+            <div class="detail">
+              <ul>
+                <li>Quốc gia: Anh</li>
+                <li>Năm phát hành: 2017</li>
+                <li>IDMB: 6.3</li>
+                <li>Phim lẻ</li>
+                <li>Tựa việt: Nghi lễ tế thần</li>
+              </ul>
+              <br>
+              <input type="button" value="Đánh giá">
+            </div>
+          </div>
+          <div class="film">
+            <figure>
+               <img src="images/kinh di/1i.jpg" alt="photo">
+               <div class="caption">
+                <figcaption><h1 class="cap">28 Weeks Later</h1></figcaption>
+               </div>
+            
+            </figure>
+            <div class="detail">
+              <ul>
+                <li>Quốc gia: Mỹ</li>
+                <li>Năm phát hành: 2007</li>
+                <li>IDMB: 7.0</li>
+                <li>Phim lẻ</li>
+                <li>Tựa việt: Đại dịch xác sống</li>
+              </ul>
+              <br>
+              <input type="button" value="Đánh giá">
+            </div>
+          </div>
+         
+          <div class="film">
+            <figure>
+               <img src="images/kinh di/1k.jpg" alt="photo">
+               <div class="caption">
+                <figcaption><h1 class="cap">Annihilation</h1></figcaption>
+               </div>
+            
+            </figure>
+            <div class="detail">
+              <ul>
+                <li>Quốc gia: Mỹ</li>
+                <li>Năm phát hành: 2018</li>
+                <li>IDMB: 6.8</li>
+                <li>Phim lẻ</li>
+                <li>Tựa việt: Vùng hủy diệt</li>
+              </ul>
+              <br>
+              <input type="button" value="Đánh giá">
+            </div>
+          </div>
+          <div class="film">
+            <figure>
+               <img src="images/kinh di/1l.jpg" alt="photo">
+               <div class="caption">
+                <figcaption><h1 class="cap">The Neon Demon</h1></figcaption>
+               </div>
+            
+            </figure>
+            <div class="detail">
+              <ul>
+                <li>Quốc gia: Mỹ</li>
+                <li>Năm phát hành: 2016</li>
+                <li>IDMB: 6.2</li>
+                <li>Phim lẻ</li>
+                <li>Tựa việt: Sắc đẹp ác quỷ</li>
+              </ul>
+              <br>
+              <input type="button" value="Đánh giá">
+            </div>
+          </div>
+        </div>
+        <div id="tab3" class="film-box">
+          <div class="film">
+            <figure>
+              <a href="#"><img src="images/kinh di/2a.jpg" alt="photo"></a> 
+                <div class="caption">
+                  <figcaption><h1 class="cap">The Shining</h1></figcaption>
+                </div>
+            </figure>
+            <div class="detail">
+              <ul>
+                <li>Quốc gia: Mĩ</li>
+                <li>Năm phát hành: 1980 </li>
+                <li>IDMB: 8.4</li>
+                <li>Phim lẻ</li>
+                <li>Tựa việt: Bình minh</li>
+              </ul>
+              <br>
+              <a href="page3.html"><input type="button" value="Đánh giá" href="page3.html"></a>
+            </div>
+          </div>
+          <div class="film">
+            <figure>
+               <img src="images/kinh di/2b.jpg" alt="photo">
+               <div class="caption">
+                <figcaption><h1 class="cap">Friday the 13th</h1></figcaption>
+               </div>
+            
+            </figure>
+            <div class="detail">
+              <ul>
+                <li>Quốc gia: Mĩ</li>
+                <li>Năm phát hành: 1980</li>
+                <li>IDMB: 6.4</li>
+                <li>Phim lẻ</li>
+                <li>Tựa việt: Thứ sáu ngày 13</li>
+              </ul>
+              <br>
+              <input type="button" value="Đánh giá">
+            </div>
+          </div>
+          <div class="film">
+            <figure>
+               <img src="images/kinh di/2c.jpg" alt="photo">
+               <div class="caption">
+                <figcaption><h1 class="cap">Jaw</h1></figcaption>
+               </div>
+            
+            </figure>
+            <div class="detail">
+              <ul>
+                <li>Quốc gia: Mĩ</li>
+                <li>Năm phát hành: 1975</li>
+                <li>IDMB: 8.0</li>
+                <li>Phim lẻ</li>
+                <li>Tựa việt: Hàm cá mập</li>
+              </ul>
+              <br>
+              <input type="button" value="Đánh giá">
+            </div>
+          </div>
+          <div class="film">
+            <figure>
+               <img src="images/kinh di/2d.jpg" alt="photo">
+               <div class="caption">
+                <figcaption><h1 class="cap">Child's Play</h1></figcaption>
+               </div>
+            
+            </figure>
+            <div class="detail">
+              <ul>
+                <li>Quốc gia: Mĩ</li>
+                <li>Năm phát hành: 1988</li>
+                <li>IDMB: 6.6</li>
+                <li>Phim lẻ(3 phần)</li>
+                <li>Tựa việt: Sát nhân búp bê</li>
+              </ul>
+              <br>
+              <input type="button" value="Đánh giá">
+            </div>
+          </div>
+          <div class="film">
+            <figure>
+               <img src="images/kinh di/2e.jpg" alt="photo">
+               <div class="caption">
+                <figcaption><h1 class="cap">Pet Sematary</h1></figcaption>
+               </div>
+            
+            </figure>
+            <div class="detail">
+              <ul>
+                <li>Quốc gia: Mĩ</li>
+                <li>Năm phát hành: 1989</li>
+                <li>IDMB: 6.6</li>
+                <li>Phim lẻ </li>
+                <li>Tựa việt: Quái Thú</li>
+              </ul>
+              <br>
+              <input type="button" value="Đánh giá">
+            </div>
+          </div>
+    
+          <div class="film">
+            <figure>
+               <img src="images/kinh di/2f.jpg" alt="photo">
+               <div class="caption">
+                <figcaption><h1 class="cap">Saw</h1></figcaption>
+               </div>
+            
+            </figure>
+            <div class="detail">
+              <ul>
+                <li>Quốc gia: Mĩ</li>
+                <li>Năm phát hành: 2004</li>
+                <li>IDMB: 7.6</li>
+                <li>Phim lẻ</li>
+                <li>Tựa việt: Lưỡi cưa</li>
+              </ul>
+              <br>
+              <input type="button" value="Đánh giá">
+            </div>
+          </div>
+          <div class="film">
+            <figure>
+               <img src="images/kinh di/2g.jpg" alt="photo">
+               <div class="caption">
+                <figcaption><h1 class="cap">A Nightmare on Elm Street<br> </h1></figcaption>
+               </div>
+    
+            </figure>
+            <div class="detail">
+              <ul>
+                <li>Quốc gia: Mĩ</li>
+                <li>Năm phát hành: 1984</li>
+                <li>IDMB: 7.5</li>
+                <li>Phim lẻ</li>
+                <li>Tựa việt: Sát nhân trong ác mộng</li>
+              </ul>
+              <br>
+              <input type="button" value="Đánh giá">
+            </div>
+          </div>
+          <div class="film">
+            <figure>
+               <img src="images/kinh di/2h.jpg" alt="photo">
+               <div class="caption">
+                <figcaption><h1 class="cap">The Evil Dead</h1></figcaption>
+               </div>
+            
+            </figure>
+            <div class="detail">
+              <ul>
+                <li>Quốc gia: Mĩ</li>
+                <li>Năm phát hành: 1981</li>
+                <li>IDMB: 7.5</li>
+                <li>Phim lẻ</li>
+                <li>Tựa việt: Ma Cây</li>
+              </ul>
+              <br>
+              <input type="button" value="Đánh giá">
+            </div>
+          </div>
+          <div class="film">
+            <figure>
+               <img src="images/kinh di/2i.jpg" alt="photo">
+               <div class="caption">
+                <figcaption><h1 class="cap">Dead Silence</h1></figcaption>
+               </div>
+            
+            </figure>
+            <div class="detail">
+              <ul>
+                <li>Quốc gia: Mĩ</li>
+                <li>Năm phát hành: 2007</li>
+                <li>IDMB: 6.2</li>
+                <li>Phim lẻ</li>
+                <li>Tựa việt: Sự im lặng chết chóc</li>
+              </ul>
+              <br>
+              <input type="button" value="Đánh giá">
+            </div>
+          </div>
+          <div class="film">
+            <figure>
+               <img src="images/kinh di/2j.jpg" alt="photo">
+               <div class="caption">
+                <figcaption><h1 class="cap">The Exorcist</h1></figcaption>
+               </div>
+            
+            </figure>
+            <div class="detail">
+              <ul>
+                <li>Quốc gia: Mĩ</li>
+                <li>Năm phát hành: 1973</li>
+                <li>IDMB: 8.0</li>
+                <li>Phim lẻ</li>
+                <li>Tựa việt: Qủy ám</li>
+              </ul>
+              <br>
+              <input type="button" value="Đánh giá">
+            </div>
+          </div>
+          <div class="film">
+            <figure>
+               <img src="images/kinh di/2k.jpg" alt="photo">
+               <div class="caption">
+                <figcaption><h1 class="cap">1408</h1></figcaption>
+               </div>
+            
+            </figure>
+            <div class="detail">
+              <ul>
+                <li>Quốc gia: Mĩ</li>
+                <li>Năm phát hành: 2007</li>
+                <li>IDMB: 6.8</li>
+                <li>Phim lẻ</li>
+                <li>Tựa việt: Căn Phòng Bí Ẩn</li>
+              </ul>
+              <br>
+              <input type="button" value="Đánh giá">
+            </div>
+          </div>
+          <div class="film">
+            <figure>
+               <img src="images/kinh di/2l.jpg" alt="photo">
+               <div class="caption">
+                <figcaption><h1 class="cap">Scary Movie</h1></figcaption>
+               </div>
+            
+            </figure>
+            <div class="detail">
+              <ul>
+                <li>Quốc gia: Mĩ</li>
+                <li>Năm phát hành: 2000</li>
+                <li>IDMB: 6.2</li>
+                <li>Phim lẻ</li>
+                <li>Tựa việt: Phim Kinh Dị</li>
+              </ul>
+              <br>
+              <input type="button" value="Đánh giá">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-item">
+      <div class="extend">
+        <div class="letter">
+          <p>Review film</p>
+          <a href="">Movies</a>
+          <a href="">TV series</a>
+        </div>
+        <div class="letter">
+          <p>Thể loại</p>
+          <a href="">Kinh Dị</a>
+          <a href="">Hành Động</a>
+          <a href="">Khoa học - Viễn Tưởng</a>
+          <a href="">Chính Kịch</a>
+          <a href="">Tâm Lí - Giật Gân</a>
+        </div> 
+      <div class="letter">
+        <p>Quốc Gia</p>
+        <a href="">Mĩ</a>
+        <a href="">India</a>
+        <a href="">China</a>
+        <a href="">Korea</a>
+        <a href="">nepal</a>
+        <a href="">spain</a>
+      </div>
+    </div>
+    <div class="subscribe">
+      <h5>Subscribe</h5>
+      <p class="sub-input">Nhập vào gmail của bạn để chúng tôi có thể thông báo về những bộ phim hoặc hoạt động mới</p>
+      <input class="email" type="text" placeholder="Enter your Email">
+      <button class="sub-but">Subscribe</button>
+    </div>
+    <div class="copyright">
+      <h2>Review film</h2>
+      <p>Copyright © Review film. All Rights Reserved</p>
+      <p>Design by Cong Duy and Khanh Huy</p>
+      <div class="wrapper">
+        <div class="icon facebook">
+          <div class="tooltip">Facebook</div>
+          <span><i class="fab fa-facebook-f"></i></span>
+        </div>
+        <div class="icon twitter">
+          <div class="tooltip">Twitter</div>
+          <span><i class="fab fa-twitter"></i></span>
+        </div>
+        <div class="icon instagram">
+          <div class="tooltip">Instagram</div>
+          <span><i class="fab fa-instagram"></i></span>
+        </div>
+        <div class="icon github">
+          <div class="tooltip">Github</div>
+          <span><i class="fab fa-github"></i></span>
+        </div>
+        <div class="icon youtube">
+          <div class="tooltip">Youtube</div>
+          <span><i class="fab fa-youtube"></i></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="modal js-modal">
+    <div class="formbg">
+        <div class="formbg-inner padding-horizontal-48">
+            <div class="modal-close js-close">
+                <i class="fas fa-times-circle"></i>
+            </div>
+          <span class="padding-bottom-15">Đăng nhập vào tài khoản</span>
+          <form id="stripe-login">
+            <div class="field padding-bottom-24">
+              <label for="email">Email</label>
+              <input type="email" name="email">
+            </div>
+            <div class="field padding-bottom-24">
+              <div class="grid--50-50">
+                <label for="password">Password</label>
+                <div class="reset-pass">
+                  <a href="#">Forgot your password?</a>
+                </div>
+              </div>
+              <input type="password" name="password">
+            </div>
+            <div class="field field-checkbox padding-bottom-24 flex-flex align-center">
+              <label for="checkbox">
+                <input type="checkbox" name="checkbox"> Stay signed in for a week
+              </label>
+            </div>
+            <div class="field padding-bottom-24">
+              <input type="submit" name="submit" value="Continue">
+            </div>
+            <div class="field">
+              <a class="ssolink" href="#">Use single sign-on (Google) instead</a>
+            </div>
+          </form>
+        </div>
+      </div>
+</div>
+
+  <script src="page.js"></script>
+  
+  
+    </body>
+    </html>
